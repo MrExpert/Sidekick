@@ -1,14 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { ExploreContainerComponent } from './explore-container.component';
+import { ExploreContainerComponent } from "./explore-container.component";
+
+import { CallLog } from "@ionic-native/call-log/ngx";
 
 @NgModule({
-  imports: [ CommonModule, FormsModule, IonicModule],
+  imports: [CommonModule, FormsModule, IonicModule],
   declarations: [ExploreContainerComponent],
-  exports: [ExploreContainerComponent]
+  providers: [CallLog ],
+  exports: [ExploreContainerComponent],
 })
 export class ExploreContainerComponentModule {}
