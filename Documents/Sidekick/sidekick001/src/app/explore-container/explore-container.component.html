@@ -6,8 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-grid>
+ <ion-content>
+   <!-- <ion-grid>
         <ion-row>
           <ion-col size="4">
               <ion-button (click)="getContacts('type','1','==')" size="small" color="success">Incoming</ion-button>
@@ -16,24 +16,62 @@
               <ion-button (click)="getContacts('type','2','==')" size="small" color="warning">Outgoing</ion-button>
           </ion-col>
           <ion-col size="4">
-              <ion-button (click)="getContacts('type','5','==')" size="small" color="danger">Rejected</ion-button>
+              <ion-button (click)="getMostFreq(results)" size="small" color="danger">Rejected</ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
               <strong>{{listTyle}}</strong>
-          </ion-col>
+               <strong>{{recordsFoundText}}</strong> 
+           </ion-col>
         </ion-row>
-    </ion-grid>    
+    </ion-grid>     -->
    
-    <ion-card  *ngFor="let contact of recordsFound" (click)="callThisNumber(contact['number'])">
-        <ion-card-header  *ngIf="contact['name']" >
-          <ion-card-title>{{contact["name"]}}</ion-card-title>
+    <!-- <ion-card  *ngFor="let contact of recordsFound" (click)="callThisNumber(contact['number'])">
+        <ion-card-header  *ngIf="contact['name']">
+          <ion-card-title>{{contact['name']}}</ion-card-title>
         </ion-card-header>
       
         <ion-card-content>
             <strong>{{contact["number"]}}</strong>
         </ion-card-content>
-    </ion-card>
+    </ion-card> -->
+    <!-- <ion-card  *ngFor="let item of mostFreq" >
+        <ion-card-header  *ngIf="item['duration']">
+          <ion-card-title>{{item['duration']}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <strong>{{item["duration"]}}</strong>
+        </ion-card-content>
+    </ion-card> -->
 
+<ion-grid>
+        <ion-row>
+          <ion-col size="4">
+          </ion-col>
+          <ion-col size="5">
+              <ion-button (click)="getContacts('type','1','==')" size="small" color="primary">Get Top Five</ion-button>
+          </ion-col>
+          <ion-col size="3">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <strong>{{listTyle}}</strong>
+              <!-- <strong>{{recordsFoundText}}</strong> -->
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+
+    <ion-row *ngFor="let hero of recordsFound">
+    <field>
+        <ion-col>
+        <h4>{{hero['name']}}</h4>
+        <ion-col>
+        <h6>
+          {{hero['number']}} </h6>
+         <p>{{hero['duration']}} seconds</p>
+    </field>
+      </ion-row>
 </ion-content>
