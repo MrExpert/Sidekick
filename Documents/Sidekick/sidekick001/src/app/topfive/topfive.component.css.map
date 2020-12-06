@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["topfive.component.scss"],"sourcesContent":["ion-list{\n    align-items: center;\n}"],"file":"topfive.component.css"}
