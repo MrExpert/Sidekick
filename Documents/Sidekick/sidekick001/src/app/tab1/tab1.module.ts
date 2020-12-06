@@ -1,11 +1,12 @@
-import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-import { Onboarding1Component } from '../onboarding1/onboarding1.component'
-import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { IonicModule } from "@ionic/angular";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { Tab1Page } from "./tab1.page";
+import { ExploreContainerComponentModule } from "../explore-container/explore-container.module";
+import { Onboarding1Component } from "../onboarding1/onboarding1.component";
+import { Onboarding2Component } from "../onboarding2/onboarding2.component";
+import { Tab1PageRoutingModule } from "./tab1-routing.module";
 
 @NgModule({
   imports: [
@@ -13,8 +14,8 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page, Onboarding1Component]
+  declarations: [Tab1Page, Onboarding1Component, Onboarding2Component],
 })
 export class Tab1PageModule {}

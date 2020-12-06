@@ -1,0 +1,38 @@
+ion-content{
+    height: 100vh;
+}
+ion-grid{
+    height: 100%;
+    padding: 50px;
+    background-color: white;
+}
+.borderGray{
+    border: 2px solid rgb(15, 15, 15);
+}
+.logo{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2em;
+    color: #FAC847
+
+}
+.center{
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.main{
+margin-top: 15%;
+font-size: xx-large;
+font-weight: 500;
+}
+.sub{
+    margin-top: 5%;
+    font-size: large;
+    font-weight: 400;
+}
+.getStarted{
+    font-size: x-large;
+    font-weight: 400;
+    background-color: #FAC847;
+}
