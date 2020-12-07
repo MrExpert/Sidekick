@@ -8,6 +8,14 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DashboardDay1Component } from '../dashboard-day1/dashboard-day1.component'
+import { DashboardDay6Component } from '../dashboard-day6/dashboard-day6.component'
+import { DashboardCongratsComponent } from '../dashboard-congrats/dashboard-congrats.component'
+
+
+
+
 @NgModule({
   imports: [
     IonicModule,
@@ -17,6 +25,6 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page, DashboardComponent, DashboardDay1Component, DashboardDay6Component, DashboardCongratsComponent]
 })
 export class Tab3PageModule {}
